@@ -39,11 +39,11 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<dependency>
-			<groupId>com.hazelcast</groupId>
-			<artifactId>hazelcast</artifactId>
-			<version>${hazelcast.version}</version>
-		</dependency>
+		<!--	<dependency>
+                <groupId>com.hazelcast</groupId>
+                <artifactId>hazelcast</artifactId>
+                <version>${hazelcast.version}</version>
+            </dependency>-->
 		<dependency>
 			<groupId>com.hazelcast</groupId>
 			<artifactId>hazelcast-spring</artifactId>

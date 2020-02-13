@@ -1,0 +1,27 @@
+version: '3'
+services:
+  hazelcast1:
+    image: hazelcast/hazelcast
+    environment:
+      - 'JAVA_OPTS=-Dhazelcast.local.publicAddress=192.168.1.157:5701 -Dhazelcast.mancenter.url=http://mancenter:8090/mancenter -Dgroup.name=hz-compose -Dgroup.password=s3crEt'
+    ports:
+      - '5701:5701'
+    links:
+      - 'management-center:mancenter'
+  hazelcast2:
+    image: hazelcast/hazelcast
+    environment:
+      - 'JAVA_OPTS=-Dhazelcast.local.publicAddress=192.168.1.157:5702 -Dhazelcast.mancenter.url=http://mancenter:8090/mancenter -Dgroup.name=hz-compose -Dgroup.password=s3crEt'
+    ports:
+      - '5702:5701'
+    links:
+      - 'management-center:mancenter'
+  management-center:
+    image: hazelcast/management-center
+    volumes:
+      - '~/mancenter3.8:/mancenter-3.8'
+    environment:
+      - MANCENTER_DATA=/mancenter-3.8
+      - JAVA_OPTS=-Dhazelcast.mc.rest.enabled=true
+    ports:
+      - '8090:8080'
