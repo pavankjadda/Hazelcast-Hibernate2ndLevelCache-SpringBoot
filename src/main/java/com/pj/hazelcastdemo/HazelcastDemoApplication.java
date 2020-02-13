@@ -10,14 +10,14 @@ public class HazelcastDemoApplication
 {
 	public static void main(String[] args)
 	{
-		test();
+		connectToHazelcastClient();
 		SpringApplication.run(HazelcastDemoApplication.class, args);
 	}
 
-	private static void test()
+	private static void connectToHazelcastClient()
 	{
 		ClientConfig clientConfig = new ClientConfig();
-		//clientConfig.getNetworkConfig().addAddress("127.0.0.1");
+		clientConfig.getNetworkConfig().addAddress("127.0.0.1");
 		HazelcastClient.newHazelcastClient(clientConfig);
 	}
 }
