@@ -39,11 +39,6 @@
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
 
-		<!--	<dependency>
-                <groupId>com.hazelcast</groupId>
-                <artifactId>hazelcast</artifactId>
-                <version>${hazelcast.version}</version>
-            </dependency>-->
 		<dependency>
 			<groupId>com.hazelcast</groupId>
 			<artifactId>hazelcast-spring</artifactId>
@@ -54,11 +49,6 @@
 			<groupId>com.hazelcast</groupId>
 			<artifactId>hazelcast-hibernate53</artifactId>
 			<version>${hazelcast-hibernate53.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>com.hazelcast</groupId>
-			<artifactId>hazelcast-client</artifactId>
-			<version>${hazelcast-client.version}</version>
 		</dependency>
 
 		<dependency>
